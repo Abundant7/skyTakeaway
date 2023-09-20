@@ -76,5 +76,15 @@ public class DishController {
         return Result.success();
     }
 
+    @PostMapping("/status/{status}")
+    public Result updateStatus(@PathVariable Integer status, Long id){
+
+        dishService.updateStatus(status,id);
+
+
+        return Result.success();
+    }
+
+
 
 }
